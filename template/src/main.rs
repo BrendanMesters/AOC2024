@@ -1,7 +1,6 @@
 use std::env;
 use std::fs;
 use std::process;
-use std::str::FromStr;
 
 fn main() {
     let (part, input_file): (usize, String) = parse_input();
@@ -26,6 +25,7 @@ fn part_one(_contents: String) {
     //!
     //! Takes the input string as an argument and
     //! should print out the result.
+    println!("In part 1");
 
     let result: usize = 0;
     println!("result part 1: {result}")
@@ -36,6 +36,7 @@ fn part_two(_contents: String) {
     //!
     //! Takes the input string as an argument and
     //! should print out the result.
+    println!("In part 2");
 
     let result: usize = 0;
     println!("result part 2: {result}");
@@ -56,7 +57,7 @@ fn parse_input() -> (usize, String) {
         process::exit(1);
     }
 
-    let part = args[1].parse::<usize>().unwrap_or_else(|e| {
+    let part = args[1].parse::<usize>().unwrap_or_else(|_e| {
         eprintln!("Error, part value should be a valid integer");
         process::exit(1);
     });
